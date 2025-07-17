@@ -69,3 +69,36 @@ Então o título da página após a pesquisa do produto deve ficar "Amazon.com.b
 
 E um produto da linha "Xbox Series S" deve ser mostrado na página
     Verificar o resultado da pesquisa se está listando o produto pesquisado
+
+Adicionar o produto "Console Xbox Series S" no carrinho
+    Click Element                xpath=//span[text()='Console Xbox Series S']
+    Element Should Be Visible    id=productTitle
+    Click Button                 id=add-to-cart-button
+
+Verificar se o produto "Console Xbox Series S" foi adicionado com sucesso
+    Wait Until Element Contains    id=nav-cart-count    1    timeout=10s
+    Element Text Should Be    id=nav-cart-count    1
+
+Remover o produto "Console Xbox Series S" do carrinho
+    Click Element    id=nav-cart-text-container
+    Click Element    xpath=//input[@aria-label="Excluir Console Xbox Series S"]
+    
+Verificar se o carrinho fica vazio
+    Element Should Not Be Visible    xpath=//span[contains(text(), "Console Xbox Series S")]
+
+Quando adicionar o produto "Console Xbox Series S" no carrinho
+    Quando pesquisar pelo produto "Xbox Series S"
+    Adicionar o produto "Console Xbox Series S" no carrinho
+    
+Então o produto "Console Xbox Series S" deve ser mostrado no carrinho
+    Verificar se o produto "Console Xbox Series S" foi adicionado com sucesso
+
+E existe o produto "Console Xbox Series S" no carrinho
+    Quando adicionar o produto "Console Xbox Series S" no carrinho
+    Então o produto "Console Xbox Series S" deve ser mostrado no carrinho
+    
+Quando remover o produto "Console Xbox Series S" do carrinho
+    Remover o produto "Console Xbox Series S" do carrinho
+    
+Então o carrinho deve ficar vazio
+    Verificar se o carrinho fica vazio
