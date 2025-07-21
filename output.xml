@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.13.5 on win32)" generated="2025-07-20T22:36:09.446702" rpa="false" schemaversion="5">
+<suite id="s1" name="Api Teste Usuarios" source="c:\CursoUdemy\RobotFramework\WebTesting\ServeRest\tests\api_teste_usuarios.robot">
+<test id="s1-t1" name="Cenário 01: Cadastrar um novo usuário com sucesso na ServeRest" line="8">
+<kw name="Criar um usuário novo" owner="api_teste_usuarios">
+<kw name="Generate Random String" owner="String">
+<msg time="2025-07-20T22:36:10.250423" level="INFO">${palavra_aleatoria} = pxnq</msg>
+<var>${palavra_aleatoria}</var>
+<arg>length=4</arg>
+<arg>chars=[LETTERS]</arg>
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<status status="PASS" start="2025-07-20T22:36:10.249982" elapsed="0.003243"/>
+</kw>
+<kw name="Convert To Lower Case" owner="String">
+<msg time="2025-07-20T22:36:10.255216" level="INFO">${palavra_aleatoria} = pxnq</msg>
+<var>${palavra_aleatoria}</var>
+<arg>${palavra_aleatoria}</arg>
+<doc>Converts string to lower case.</doc>
+<status status="PASS" start="2025-07-20T22:36:10.253715" elapsed="0.002193"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-07-20T22:36:10.257649" level="INFO">Minha palavra aleatoria: pxnq@emailteste.com</msg>
+<arg>Minha palavra aleatoria: ${palavra_aleatoria}@emailteste.com</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-07-20T22:36:10.256655" elapsed="0.002271"/>
+</kw>
+<kw name="Set Test Variable" owner="BuiltIn">
+<msg time="2025-07-20T22:36:10.261690" level="INFO">${EMAIL_TESTE} = pxnq@emailteste.com</msg>
+<arg>${EMAIL_TESTE}</arg>
+<arg>${palavra_aleatoria}@emailteste.com</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<status status="PASS" start="2025-07-20T22:36:10.259935" elapsed="0.002112"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-07-20T22:36:10.262760" level="INFO">pxnq@emailteste.com</msg>
+<arg>${EMAIL_TESTE}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-07-20T22:36:10.262387" elapsed="0.000619"/>
+</kw>
+<status status="PASS" start="2025-07-20T22:36:10.249273" elapsed="0.013964"/>
+</kw>
+<status status="PASS" start="2025-07-20T22:36:10.248387" elapsed="0.015395"/>
+</test>
+<status status="PASS" start="2025-07-20T22:36:09.454920" elapsed="0.810732"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Api Teste Usuarios" id="s1" pass="1" fail="0" skip="0">Api Teste Usuarios</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
